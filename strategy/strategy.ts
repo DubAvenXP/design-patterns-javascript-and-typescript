@@ -18,7 +18,6 @@ class LoginContext {
     }
 }
 
-
 // ********************
 
 // Strategies
@@ -30,12 +29,26 @@ class LocalStrategy implements Strategy {
         if (!(user && password)) return false;
 
         // Do something with user and password
-        if (user === 'admin' && password === 'admin') return true;
+        if (user === "admin" && password === "admin") return true;
 
         return true;
     }
 }
 
+// Strategy 2
+
+class FacebookStrategy implements Strategy {
+    login(user: string, password: string): boolean {
+        if (!(user && password)) return false;
+        return true;
+    }
+}
 
 const auth = new LoginContext(new LocalStrategy());
+
+auth.login("admin", "admin"); // true
+
+auth.setStrategy(new FacebookStrategy());
+
+auth.login("admin", "admin"); // true
 
