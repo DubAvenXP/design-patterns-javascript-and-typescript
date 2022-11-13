@@ -13,3 +13,11 @@ In software engineering, the singleton pattern is a software design pattern that
 It's a creational pattern because it deals with object creation mechanisms, trying to create objects in a manner suitable to the situation.
 
 Some people consider the singleton to be an anti-pattern, and advise against its use. However, there are times when a singleton is the best solution to a problem.
+
+## Behavioral Patterns
+
+### Strategy
+
+The strategy pattern (also known as the policy pattern) is a software design pattern that enables an algorithm's behavior to be selected at runtime. The strategy pattern is a behavioral software design pattern that enables selecting an algorithm at runtime.
+
+For example the popular library [Moment.js](https://momentjs.com/) uses the strategy pattern to allow the user to choose the date format and other library like passport.js uses the strategy pattern to allow the user to choose the authentication method.
